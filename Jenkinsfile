@@ -20,6 +20,7 @@ osio {
           RELEASE_VERSION: "1.0.${env.BUILD_NUMBER}"
     ])
     
+    build resources: resources
 
     deploy resources: resources, env: 'stage'
 
