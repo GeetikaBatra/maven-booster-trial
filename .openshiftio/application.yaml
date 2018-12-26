@@ -74,7 +74,7 @@ objects:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: runtime-health-check-vertx
+          name: runtime-health-check-vertx:latest
         incremental: true
         env:
         - name: MAVEN_ARGS_APPEND
