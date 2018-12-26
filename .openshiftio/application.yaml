@@ -48,10 +48,10 @@ objects:
       booster: health-check-vertx
   spec:
     tags:
-    - name: '${RELEASE_VERSION}'
+    - name: latest
       from:
         kind: DockerImage
-        name: 'registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:${RELEASE_VERSION}'
+        name: registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:latest
 
 - apiVersion: v1
   kind: BuildConfig
@@ -74,7 +74,7 @@ objects:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: runtime-health-check-vertx:${RELEASE_VERSION}
+          name: runtime-health-check-vertx
         incremental: true
         env:
         - name: MAVEN_ARGS_APPEND
